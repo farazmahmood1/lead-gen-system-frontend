@@ -9,6 +9,7 @@ import Skincare from "./Skincare";
 import VideoSection from "./VideoSection";
 import PracticeSection from "./PracticeSection";
 
+// 
 export default function Home() {
   return (
     <div>
