@@ -60,7 +60,7 @@ export default function Header() {
         >
           <nav
             className="flex items-center"
-            style={{ justifyContent: "space-evenly", width: "650px" }}
+            style={{ justifyContent: "space-evenly", minWidth: "600px" }}
           >
             {links.map(({ label, href }, i) => (
               <a
