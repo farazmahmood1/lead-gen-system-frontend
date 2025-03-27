@@ -174,14 +174,22 @@ export default function Plans() {
       {isOpen && (
         
         <div
-        className="fixed inset-0 z-50 rounded-sm  bg-cover bg-center bg-no-repeat overflow-y-auto custom-scroll m-16 mt-20"
+        className="fixed inset-0 z-50 rounded-xl  bg-cover bg-center bg-no-repeat overflow-y-auto custom-scroll m-16 mt-20 "
         style={{ backgroundImage: "url('/background.png')" }} 
         onClick={() => setIsOpen(false)} 
         >
           
-              
-        <div className="text-white text-center mt-16 font-bold text-[30px]">Pricing Explanation</div>
-        <div className="text-white text-center my-6">Skincare consumer by zipcode</div>
+          <div className="absolute inset-0 bg-[#0E6EA9] opacity-50 "></div> 
+
+          <button
+      className="absolute top-4 right-4 cursor-pointer text-white text-3xl font-bold hover:text-gray-300 transition duration-300"
+      onClick={() => setIsOpen(false)}
+    >
+      &times;
+    </button>
+          <div className="relative z-10">     
+        <div className="text-white text-center mt-8 font-medium text-[35px] leading-[39px]">Pricing Explanation</div>
+        <div className="text-white text-center mt-2 mb-8">Skincare consumer by zipcode</div>
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 m-4 ">
         {benefitsData.map((benefit, index) => (
           <div
@@ -199,7 +207,7 @@ export default function Plans() {
           </div>
         ))}
       </div>
-
+</div>
         </div>
       )}
     </div>
