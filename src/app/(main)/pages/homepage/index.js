@@ -11,6 +11,7 @@ import PracticeSection from "./PracticeSection";
 
 // 
 export default function Home() {
+  
   return (
     <div>
       <Hero />
