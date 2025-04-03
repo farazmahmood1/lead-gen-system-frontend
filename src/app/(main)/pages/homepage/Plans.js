@@ -174,7 +174,7 @@ export default function Plans() {
       {isOpen && (
         
         <div
-        className="fixed inset-0 z-50 rounded-xl  bg-cover bg-center bg-no-repeat overflow-y-auto custom-scroll m-16 mt-20 "
+        className="fixed inset-0 z-50 rounded-xl  bg-cover bg-center bg-no-repeat overflow-y-auto custom-scroll m-16 mt-34 "
         style={{ backgroundImage: "url('/background.png')" }} 
         onClick={() => setIsOpen(false)} 
         >
