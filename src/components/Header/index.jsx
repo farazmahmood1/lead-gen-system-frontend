@@ -43,7 +43,7 @@ export default function Header() {
       style={{
         background: isAtTop ? "transparent" : "rgba(255, 255, 255, 0.8)",
         backdropFilter: isAtTop ? "none" : "blur(10px)",
-        padding: "20px 20px",
+        padding: "20px 70px",
       }}
     >
       <header className="w-full mx-auto min-h-[92px] flex items-center justify-between gap-4">
@@ -62,7 +62,7 @@ export default function Header() {
             className="flex items-center"
             style={{ justifyContent: "space-evenly", minWidth: "600px" }}
           >
-            {links.map(({ label, href }, i) => (
+            {/* {links.map(({ label, href }, i) => (
               <a
                 key={i}
                 href={href}
@@ -72,7 +72,7 @@ export default function Header() {
               >
                 {label}
               </a>
-            ))}
+            ))} */}
           </nav>
           <div
             className="relative flex items-center bg-gray-100 overflow-hidden"
