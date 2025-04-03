@@ -40,14 +40,38 @@ const benefitsData = [
   },
 ];
 
+const points = [
+  "Imagine having instant access to a live list of high-intent skincare consumers near you—people actively researching treatments, browsing product reviews, even visiting your competitor’s website today.",
+  "This isn’t a fantasy. It’s the most valuable data your practice could ever touch.",
+  "While platforms like Facebook waste your budget on broad, vague interest categories that don’t signal intent, we deliver verified buyers already on the path to purchase. Here’s how we do it:"
+];
+
 export default function Benefits() {
   const [activeIndex, setActiveIndex] = useState(null);
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-12">
-      <h2 className="text-3xl font-bold mb-10">
-        Key Benefits of Skin Prospect
+      <h2 className="text-4xl font-bold mb-10 text-center text-[#252525]">
+      What If You Could See Exactly Who’s Searching for<br/> Skincare in Your Area—Right Now?”
       </h2>
+
+      <div className="space-y-4 mt-12 mb-10">
+      {points.map((point, index) => (
+        <div key={index} className=" space-x-3" style={{display:"flex", justifyContent:"flex-start", alignItems:"center", position:"relative", width:"70%"}}>
+          <div className="bg-blue-600 " style={{height:"20px", width:"20px", borderRadius:"25px", position:"absolute"}}></div>
+          <p className="text-gray-800 text-[15px] ms-10">
+            {index === 2 ? (
+              <>
+                While platforms like Facebook waste your budget on broad, vague interest categories that don’t signal intent,{" "}
+                <span className="font-bold">we deliver verified buyers already on the path to purchase. Here’s how we do it:</span>
+              </>
+            ) : (
+              point
+            )}
+          </p>
+        </div>
+      ))}
+    </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 m-4">
         {benefitsData.map((benefit, index) => (

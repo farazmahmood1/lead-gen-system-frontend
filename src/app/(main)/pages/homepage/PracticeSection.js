@@ -3,7 +3,7 @@ import React from 'react';
 export default function PracticeSection() {
     return (
         <div className="bg-white py-16">
-            <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
+            <div className=" mx-auto flex flex-col md:flex-row items-center justify-between">
                 <div className="w-full md:w-2/3 ml-0 md:ml-16">
                     <h1 className="text-5xl font-bold mb-4 text-gray-800">
                         Apply This to Your Practice Today
@@ -17,7 +17,7 @@ export default function PracticeSection() {
                                 <img
                                     src="/assets/warning.png"
                                     alt="Warning Icon"
-                                    className="w-13 h-7"
+                                    className="img-fluid"
                                 />
                             </span>
                             <div>
@@ -31,7 +31,7 @@ export default function PracticeSection() {
                                 <img
                                     src="/assets/arrow.png"
                                     alt="Arrow Icon"
-                                    className="w-13 h-7"
+                                    className="img-fluid"
                                 />
                             </span>
                             <div>

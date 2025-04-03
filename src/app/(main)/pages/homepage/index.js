@@ -8,7 +8,7 @@ import TargetingAdds from "./TargetingAdds";
 import Skincare from "./Skincare";
 import VideoSection from "./VideoSection";
 import PracticeSection from "./PracticeSection";
-import SkinProspects from "./skinProspects";
+import SkinProspects from "./SkinProspects";
 
 // 
 export default function Home() {
