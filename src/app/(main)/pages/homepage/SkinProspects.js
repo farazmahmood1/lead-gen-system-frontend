@@ -43,9 +43,9 @@ export default function SkinProspects() {
             <li key={index} className="flex items-start gap-4 lg:gap-7">
               <div className="mt-1">
               <div className="flex flex-col items-center">
-        <div className="w-3 h-3 bg-[#0E6EA9] rounded-full"></div>
-        {index !== 5 && ( // Last item ke baad line nahi hogi
-          <div className="w-[1px] h-16 border-l-2 border-[#0E6EA9] border-dashed"></div>
+        <div className="w-2 h-2 bg-[#0E6EA9] rounded-full"></div>
+        {index !== 5 && ( 
+          <div className="w-[0.8px] h-16 border-l-2 border-[#0E6EA9] border-dashed"></div>
         )}
       </div>
               </div>
