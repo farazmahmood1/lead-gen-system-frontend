@@ -8,9 +8,11 @@ import TargetingAdds from "./TargetingAdds";
 import Skincare from "./Skincare";
 import VideoSection from "./VideoSection";
 import PracticeSection from "./PracticeSection";
+import SkinProspects from "./skinProspects";
 
 // 
 export default function Home() {
+  
   return (
     <div>
       <Hero />
@@ -20,6 +22,7 @@ export default function Home() {
         <div className="mt-4">
           <Working />
         </div>
+        <SkinProspects/>
         <Benefits />
       </div>
       <Plans />
