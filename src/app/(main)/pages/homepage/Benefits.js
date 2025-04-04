@@ -43,7 +43,7 @@ export default function Benefits() {
       <div className="space-y-4 mt-12 mb-10 ms-3 me-3">
         {points.map((point, index) => (
           <div key={index} className=" space-x-3" style={{ display: "flex", justifyContent: "flex-start", alignItems: "center", position: "relative", width: "70%" }}>
-            <div className="bg-blue-600 " style={{ height: "20px", width: "20px", borderRadius: "25px", position: "absolute" }}></div>
+            <div style={{ height: "20px", width: "20px", borderRadius: "25px", position: "absolute", backgroundColor:"#0E6EA9" }}></div>
             <p className="text-gray-800 text-[15px] ms-10">
               {index === 2 ? (
                 <>
@@ -62,7 +62,6 @@ export default function Benefits() {
         {benefitsData.map((benefit, index) => (
           <div
             key={index}
-            onClick={() => setActiveIndex(index)}
             className="p-7 border border-[#0E6EA9] rounded-xl shadow-md cursor-pointer"
           >
             <img

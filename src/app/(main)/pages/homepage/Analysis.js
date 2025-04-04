@@ -63,7 +63,7 @@ export default function Analysis() {
             ].map((item, index) => (
               <li key={index} className="flex items-start gap-4 lg:gap-7">
                 <div className="mt-1">
-                  <Checkbox checked />
+                  <Checkbox checked className="w-[15px] h-[15px]"/>
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-800">{item.title}</h3>
