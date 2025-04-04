@@ -12,7 +12,7 @@ import SkinProspects from "./SkinProspects";
 
 // 
 export default function Home() {
-  
+
   return (
     <div>
       <Hero />
@@ -22,14 +22,14 @@ export default function Home() {
         <div className="mt-4">
           <Working />
         </div>
-        <SkinProspects/>
+        <SkinProspects />
         <Benefits />
       </div>
       <Plans />
       <Skincare />
       <TargetingAdds />
-      <VideoSection/>
-      <PracticeSection/>
+      <VideoSection />
+      <PracticeSection />
     </div>
   );
 }
