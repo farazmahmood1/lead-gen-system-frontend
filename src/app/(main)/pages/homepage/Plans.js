@@ -73,9 +73,7 @@ const benefitsData = [
 export default function Plans() {
   const [selectedPlan, setSelectedPlan] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
-    const [activeIndex, setActiveIndex] = useState(null);
-  
-    
+  const [activeIndex, setActiveIndex] = useState(null);
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-12">
@@ -93,20 +91,18 @@ export default function Plans() {
           <div
             key={index}
             className={`relative rounded-lg shadow-lg cursor-pointer transition-all duration-300 
-              ${
-                selectedPlan === index
-                  ? "bg-[#DBDFFF] text-black transform -translate-y-4 scale-105 z-10 shadow-xl"
-                  : "bg-white"
+              ${selectedPlan === index
+                ? "bg-[#DBDFFF] text-black transform -translate-y-4 scale-105 z-10 shadow-xl"
+                : "bg-white"
               }`}
             onClick={() => setSelectedPlan(index)}
           >
             {/* Plan Name */}
             <div
-              className={`p-6 ${
-                selectedPlan === index
+              className={`p-6 ${selectedPlan === index
                   ? "bg-[#0E6EA9] text-white rounded-t-md"
                   : "bg-[#DBDFFF] rounded-t-md"
-              }`}
+                }`}
             >
               <h3 className="text-lg font-bold">{plan.name}</h3>
             </div>
@@ -131,12 +127,11 @@ export default function Plans() {
             </ul>
 
             {/* Unlock Data Section */}
-            <p className={`mt-4 p-6 text-sm ${
-                selectedPlan === index
-                  ? " text-[black]"
-                  : " text-[#C1C1C1]"
+            <p className={`mt-4 p-6 text-sm ${selectedPlan === index
+                ? " text-[black]"
+                : " text-[#C1C1C1]"
               }`}>
-              <hr class={`border-t-[1.5px] border-dashed my-4 mr-16 ${selectedPlan===index?"border-black":"border-[#0E6EA9]"}`} />
+              <hr class={`border-t-[1.5px] border-dashed my-4 mr-16 ${selectedPlan === index ? "border-black" : "border-[#0E6EA9]"}`} />
               Unlock <span className="text-[#0E6EA9]">Full </span>
               Data After Login
             </p>
@@ -160,57 +155,57 @@ export default function Plans() {
       </div>
 
       {/* What's This? */}
-      <div className="mt-10 relative"> 
-      <div
-        className="flex items-center space-x-2 text-gray-500 cursor-pointer"
-        onClick={() => setIsOpen(true)}
-      >
-        <span className="text-xl">
-          <img src="/icons/arrow.svg" className="w-8 h-8" alt="arrow" />
-        </span>
-        <p className="underline">What’s this?</p>
-      </div>
-
-      {isOpen && (
-        
+      <div className="mt-10 relative">
         <div
-        className="fixed inset-0 z-50 rounded-xl  bg-cover bg-center bg-no-repeat overflow-y-auto custom-scroll m-16 mt-34 "
-        style={{ backgroundImage: "url('/background.png')" }} 
-        onClick={() => setIsOpen(false)} 
+          className="flex items-center space-x-2 text-gray-500 cursor-pointer"
+          onClick={() => setIsOpen(true)}
         >
-          
-          <div className="absolute inset-0 bg-[#0E6EA9] opacity-50 "></div> 
-
-          <button
-      className="absolute top-4 right-4 cursor-pointer text-white text-3xl font-bold hover:text-gray-300 transition duration-300"
-      onClick={() => setIsOpen(false)}
-    >
-      &times;
-    </button>
-          <div className="relative z-10">     
-        <div className="text-white text-center mt-8 font-medium text-[35px] leading-[39px]">Pricing Explanation</div>
-        <div className="text-white text-center mt-2 mb-8">Skincare consumer by zipcode</div>
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 m-4 ">
-        {benefitsData.map((benefit, index) => (
-          <div
-            key={index}
-            onClick={() => setActiveIndex(index)}
-            className={`p-6 border border-[#bee1fc] rounded-xl shadow-md cursor-pointer bg-white`}
-          >
-            <img
-              src={benefit.icon}
-              alt={benefit.title}
-              className={`w-10 h-10`}
-            />
-            <h3 className="font-bold text-lg mt-4">{benefit.title}</h3>
-            <p className="mt-4 font-extralight text-[#3A3A3A]">{benefit.description}</p>
-          </div>
-        ))}
-      </div>
-</div>
+          <span className="text-xl">
+            <img src="/icons/arrow.svg" className="w-8 h-8" alt="arrow" />
+          </span>
+          <p className="underline">What’s this?</p>
         </div>
-      )}
-    </div>
+
+        {isOpen && (
+
+          <div
+            className="fixed inset-0 z-50 rounded-xl  bg-cover bg-center bg-no-repeat overflow-y-auto custom-scroll m-16 mt-34 "
+            style={{ backgroundImage: "url('/background.png')" }}
+            onClick={() => setIsOpen(false)}
+          >
+
+            <div className="absolute inset-0 bg-[#0E6EA9] opacity-50 "></div>
+
+            <button
+              className="absolute top-4 right-4 cursor-pointer text-white text-3xl font-bold hover:text-gray-300 transition duration-300"
+              onClick={() => setIsOpen(false)}
+            >
+              &times;
+            </button>
+            <div className="relative z-10">
+              <div className="text-white text-center mt-8 font-medium text-[35px] leading-[39px]">Pricing Explanation</div>
+              <div className="text-white text-center mt-2 mb-8">Skincare consumer by zipcode</div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 m-4 ">
+                {benefitsData.map((benefit, index) => (
+                  <div
+                    key={index}
+                    onClick={() => setActiveIndex(index)}
+                    className={`p-6 border border-[#bee1fc] rounded-xl shadow-md cursor-pointer bg-white`}
+                  >
+                    <img
+                      src={benefit.icon}
+                      alt={benefit.title}
+                      className={`w-10 h-10`}
+                    />
+                    <h3 className="font-bold text-lg mt-4">{benefit.title}</h3>
+                    <p className="mt-4 font-extralight text-[#3A3A3A]">{benefit.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
