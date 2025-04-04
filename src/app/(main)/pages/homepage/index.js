@@ -25,8 +25,8 @@ export default function Home() {
         <SkinProspects />
         <Benefits />
       </div>
-      <Plans />
-      <Skincare />
+      {/* <Plans /> */}
+      {/* <Skincare /> */}
       <TargetingAdds />
       <VideoSection />
       <PracticeSection />
